@@ -1,0 +1,228 @@
+.response-jaksel {
+    background-color: rgba(79, 70, 229, 0.1);
+    border-left-color: #4f46e5;
+    font-style: italic;
+    color: #a5b4fc;
+}
+
+.response-jaksel::before {
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #4f46e5;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: white;
+}
+
+.suggestion-jaksel {
+    background-color: rgba(4, 120, 87, 0.1);
+    border-left-color: #047857;
+    font-style: italic;
+    color: #a5b4fc;
+}
+
+.suggestion-jaksel::before {
+    
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #047857;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: white;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+.chat-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(26, 32, 44, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #a5b4fc;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background-color: rgba(22, 28, 36, 0.8);
+}
+
+.message-section {
+    position: relative;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 15px;
+    border-left: 5px solid;
+    background-color: rgba(22, 28, 36, 0.8);
+}
+
+.jaksel-translation {
+    margin-top: 10px;
+    font-size: 0.9em;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a5b4fc;
+    font-style: italic;
+}
+
+.correction {
+    background-color: rgba(220, 38, 38, 0.2);
+    border-left-color: #dc2626;
+}
+
+.correction::before {
+    content: '✍️ Correction';
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #dc2626;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: white;
+}
+
+.explanation {
+    background-color: rgba(3, 105, 161, 0.2);
+    border-left-color: #0369a1;
+}
+
+.explanation::before {
+    content: '💡 Explanation';
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #0369a1;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: white;
+}
+
+.response {
+    background-color: rgba(79, 70, 229, 0.2);
+    border-left-color: #4f46e5;
+}
+
+.response::before {
+    content: '🗣️ Response';
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #4f46e5;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: white;
+}
+
+.suggestion {
+    background-color: rgba(4, 120, 87, 0.2);
+    border-left-color: #047857;
+}
+
+.suggestion::before {
+    content: '💭 Suggestion';
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #047857;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: white;
+}
+
+.message {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-out;
+    line-height: 1.5;
+}
+
+.user-message {
+    background-color: #4f46e5;
+    margin-left: auto;
+}
+
+.ai-message {
+    background-color: #312e81;
+    margin-right: auto;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+button:disabled {
+    background: #4b5563;
+    cursor: not-allowed;
+}
+
+.status {
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+    color: #a5b4fc;
+}
+
+.audio-player {
+    margin-top: 15px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
